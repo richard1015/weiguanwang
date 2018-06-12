@@ -1,0 +1,29 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/food/food",
+    "pages/foodinfo/foodinfo",
+    "pages/hotel/hotel",
+    "pages/hotelinfo/hotelinfo",
+    "pages/active/active",
+    "pages/activeinfo/activeinfo",
+    "pages/video/video",
+    "pages/videoinfo/videoinfo",
+    "pages/wifi/wifi",
+    "pages/map/map",
+    "pages/mapguide/mapguide",
+    "pages/scenicspotlist/scenicspotlist",
+    "pages/scenicspotinfo/scenicspotinfo",
+    "pages/comment/comment",
+    "pages/raiders/raiders",
+    "pages/raidersinfo/raidersinfo",
+    "pages/scenicintroduce/scenicintroduce",
+    "pages/custom/custom",
+    "pages/custominfo/custominfo"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle":"black"
+  }
+}

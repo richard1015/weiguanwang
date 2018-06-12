@@ -1,0 +1,22 @@
+<!--custominfo.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="food-main">
+    <image class="banner" src="{{pageData.TitleImg}}"/>
+    <view class="title">{{pageData.Title}}</view>
+<!--     <view class="info">
+        <view class="num">浏览<text class="">{{pageData.BrowseVolume}}</text></view>
+        <view class="intro">{{"特色："+pageData.TitleLabel}}</view>
+    </view> -->
+    <template is="wxParse" data="{{wxParseData:Content.nodes}}"/>
+<!--     <view
+        bindtap="getLikes"
+        class="floor">
+        <view class="icon">
+            <image class="" src="../../image/zan.png"/>
+        </view>
+        <text class="">支持一下</text>
+    </view> -->
+</view>
+<!-- <view
+  bindtap="goback"
+  class="par_goback">返回</view> -->

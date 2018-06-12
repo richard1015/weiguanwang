@@ -1,0 +1,51 @@
+<scroll-view 
+  class="scenicspot_main" 
+  scroll-y="true"
+  lower-threshold="200" 
+  bindscrolltolower="scrolltolowerEvent">
+  <view class="scenicspot_goback" bindtap="toGoBack">全部景区</view>
+  <!-- 起航建议尺寸 690*350 -->
+  <swiper 
+    class="scenicspot_swiper"
+    indicator-dots="{{indicatorDots}}" 
+    autoplay="{{autoplay}}" 
+    interval="{{interval}}" 
+    duration="{{duration}}" 
+    circular="{{true}}" >
+    <swiper-item wx:for="{{imgUrls}}" wx:key="{{item.index}}">
+      <image src="{{item}}" class="slide-image" mode="scaleToFill"/>
+    </swiper-item>
+  </swiper>
+  <view class="scenicspot_sort">
+    <navigator id="{{item.id}}" class="scenicspot_sort_list" wx:for-items="{{sort.list}}" wx:key="{{item.id}}" url="{{item.url}}">
+      <image src="{{item.image}}"></image>
+      <span>{{item.name}}</span> 
+    </navigator>
+  </view>
+  <!-- 注意 open-type -->
+  <view class="scenicspot_view" >
+    <navigator 
+      id="{{item.Id}}" 
+      class="scenicspot_main_list" 
+      hover-class="none"
+      url="../../pages/scenicSpotInfo/scenicSpotInfo?id={{item.Id}}&pid={{item.Pid}}&name={{item.SSName}}&pName={{title}}" 
+      open-type="navigate" 
+      wx:for-items="{{scenicSpotListData}}" 
+      wx:key="{{item.Id}}">
+      <view class="image_wrap">
+        <image src="{{item.PicImg}}"></image>
+        <view class="middle_icon">
+          <view></view>
+        </view>
+        <view class="required" wx:if="{{item.IsListen==1}}">必听</view>
+      </view>
+      <span>{{item.SSName}}</span> 
+    </navigator>
+  </view>
+  <view class="scenicspot_load">
+    <text wx:if="{{listLoad && listLoadText}}">正在加载...</text>
+    <image 
+      wx:if="{{listLoad && !listLoadText}}"
+      src="/image/daodi.png"></image>
+  </view>
+</scroll-view>

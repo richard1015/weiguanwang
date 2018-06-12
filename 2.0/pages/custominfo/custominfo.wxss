@@ -1,0 +1,56 @@
+.food-main{
+    padding:0 30rpx;
+}
+.food-main .banner{
+    display: block;
+    width: 690rpx;
+    height: 504rpx;
+}
+.food-main .title{
+    font-size: 44rpx;
+    color:#000000;
+    font-weight: 600;
+    line-height: 60rpx;
+}
+.food-main .info{
+    margin:30rpx 0;
+}
+.food-main .info .intro{
+    width: 690rpx;
+    font-size: 32rpx;
+    line-height: 40rpx;
+    font-weight: 600;
+    color:#009cff;
+}
+.food-main .info .num{
+    float:right;
+    font-size: 28rpx;
+    line-height: 28rpx;
+    color:#333333;
+}
+.food-main .info .num>text{
+    margin-left:10rpx;
+}
+.floor{
+    width: 40%;
+    margin:60rpx auto;
+    text-align: center;
+}
+.floor .icon{
+    position: relative;
+    width: 100rpx;
+    height: 100rpx;
+    margin:30rpx auto 30rpx;
+    background-color: #ffc600;
+    border-radius: 50rpx;
+}
+.floor .icon image{
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    display:block;
+    width:60rpx;
+    height:60rpx;
+    margin:0 auto;
+}

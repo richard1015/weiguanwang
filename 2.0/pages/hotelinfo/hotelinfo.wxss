@@ -1,0 +1,33 @@
+.food-main{
+    padding:0 30rpx;
+}
+.food-main .banner{
+    display: block;
+    width: 690rpx;
+    height: 504rpx;
+}
+.food-main .title{
+    font-size: 44rpx;
+    color:#000000;
+    font-weight: 600;
+    line-height: 60rpx;
+}
+.food-main .info{
+    margin:30rpx 0;
+}
+.food-main .info .intro{
+    width: 690rpx;
+    font-size: 32rpx;
+    line-height: 40rpx;
+    font-weight: 600;
+    color:#009cff;
+}
+.food-main .info .num{
+    float:right;
+    font-size: 28rpx;
+    line-height: 28rpx;
+    color:#333333;
+}
+.food-main .info .num>text{
+    margin-left:10rpx;
+}

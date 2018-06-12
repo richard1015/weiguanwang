@@ -1,0 +1,61 @@
+.raiders-main{
+    padding-bottom:30rpx;
+}
+.raiders-main .head{
+    width: 690rpx;
+    margin:28rpx auto;
+    font-size: 44rpx;
+    color:rgb(34,34,34);
+    font-weight: bold;
+}
+.raiders-main .info{
+    width: 690rpx;
+    margin:0 auto 20rpx;
+}
+.raiders-main .info image{
+    float:left;
+    display: block;
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+}
+.raiders-main .info .main{
+    display: block;
+    height: 60rpx;
+    margin-left:80rpx;  
+}
+.raiders-main .info .main .title{
+    font-size: 28rpx;
+    line-height: 36rpx;
+    color:rgb(34,34,34);
+}
+.raiders-main .info .main .time{
+    font-size: 24rpx;
+    line-height: 24rpx;
+    color:rgb(34,34,34);
+}
+.raiders-main .content{
+    width: 690rpx;
+    margin:0 auto 20rpx;
+}
+.raiders-main .lable{
+    width: 690rpx;
+    margin:0 auto 30rpx;    
+}
+.raiders-main .lable .list{
+    float:left;
+    height: 50rpx;
+    padding:0 20rpx;
+    margin-right:20rpx;
+    background-color: rgb(242,242,242);
+    border-radius: 25rpx;
+    font-size: 24rpx;
+    line-height: 50rpx;
+    color: #666666;
+    text-align: center;
+}
+.raiders-main .browse{
+    width: 690rpx;
+    margin:0 auto;
+    font-size: 28rpx;
+}

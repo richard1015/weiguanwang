@@ -1,0 +1,259 @@
+page{
+    background-color: #f6f6f6;
+}
+.scenicspotinfo_goback{
+  position: absolute;
+  top:40rpx;
+  left:0;
+  z-index: 5;
+  width: 150rpx;
+  height: 50rpx;
+  background-color: #ffffff;
+  border-top-right-radius: 25rpx;
+  border-bottom-right-radius: 25rpx;
+  font-size:24rpx;
+  line-height: 50rpx;
+  color:#fe7c1a;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+swiper.scenicspotinfo_swiper{
+    width: 750rpx;
+    height: 380rpx;
+}
+.scenicspotinfo_swiper .slide-image{
+    width:100%;
+    height: 100%;
+}
+.scenicspotinfo_audio{
+    position: relative;
+    width: 100%;
+    height:108rpx;
+    margin-bottom: 24rpx;
+    background-color: #ffffff;
+}
+.scenicspotinfo_audio audio{
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    vertical-align: hidden;
+}
+.scenicspotinfo_audio .copy_audio{
+    position: absolute;
+    z-index: 2;
+    width: 702rpx;
+    height: 100%;
+    padding:0 24rpx;
+    background-color:#ffffff;
+}
+.scenicspotinfo_audio .copy_audio .copy_audio_btn{
+    float:left;
+    width: 70rpx;
+    height: 100%;
+}
+.scenicspotinfo_audio .copy_audio .copy_audio_btn image{
+    width:40rpx;
+    height:40rpx;
+    margin-top:32rpx;
+}
+.scenicspotinfo_audio .copy_audio .copy_audio_time{
+    float:left;
+    width:70rpx;
+    height: 100%;
+    font-size:26rpx;
+    line-height:108rpx;
+    color:#222222;
+    text-align: center;
+    overflow:hidden;
+}
+.scenicspotinfo_audio .copy_audio .copy_audio_progress{
+    float:left;
+    position: relative;
+    width: 452rpx;
+    height: 100%;
+    margin:0 20rpx;
+    /* overflow: hidden; */
+}
+.scenicspotinfo_audio .copy_audio .copy_audio_progress progress{
+    position: absolute;
+    top:54rpx;
+    left:30rpx;
+    z-index: 2;
+    width:400rpx;
+}
+.scenicspotinfo_audio .copy_audio .copy_audio_progress slider{
+    position: relative;
+    top:0;
+    left:0;
+    z-index: 3;
+    margin:38rpx 30rpx;
+}
+.scenicspotinfo_audio .copy_audio .copy_audio_progress .progress_line{
+    position: absolute;
+    top:52rpx;
+    left:0;
+    z-index: 3;
+    width: 100%;
+    height: 4rpx;
+    background-color:#d7d7d7;
+}
+.scenicspotinfo_audio .copy_audio .copy_audio_progress .progress_line_active{
+    position: absolute;
+    top:52rpx;
+    left:-430rpx;
+    z-index: 4;
+    width: 100%;
+    height: 4rpx;
+    background-color:#fd8316;
+}
+.scenicspotinfo_audio .copy_audio .copy_audio_progress .progress_btn{
+    position: absolute;
+    top:0rpx;
+    left:-430rpx;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-image: url(/image/bofang_btn.png);
+    background-repeat: no-repeat;
+    background-size: 32rpx 32rpx;
+    background-position: 430rpx 34rpx;
+}
+.scenicspotinfo_titles{
+    height:88rpx;
+    padding-left:24rpx;
+    background-color: #ffffff;
+    border-bottom: 2rpx solid #c8c7cc;
+    font-size:32rpx;
+    line-height: 88rpx;
+    color:#222222;
+}
+.scenicspotinfo_info{
+    position: relative;
+    padding: 14rpx 24rpx 24rpx;
+    margin-bottom: 12rpx;
+    background: #ffffff;
+}
+.scenicspotinfo_info .til{
+    display: block;
+    font-size: 28rpx;
+    line-height: 50rpx;
+    color:#222222;
+}
+.scenicspotinfo_info .main{
+    display: block;
+    height:76rpx;
+    margin-bottom: 12rpx;
+    font-size: 32rpx;
+    line-height: 38rpx;
+    color:rgb(102, 102, 102);
+    text-indent: 64rpx;
+    overflow:hidden;
+}
+.scenicspotinfo_info .main.active{
+    height:auto;
+}
+.scenicspotinfo_info .openbtn{
+    position: relative;
+    display: block;
+    padding-right: 40rpx;
+    font-size: 32rpx;
+    line-height: 48rpx;
+    color:#5bcff6;
+    text-align: center;
+}
+.scenicspotinfo_info .openbtn .btnname{
+    font-size: 32rpx;
+    line-height: 48rpx;
+}
+.scenicspotinfo_info .openbtn .openarrow{
+    position: absolute;
+    left:53%;
+    top:0;
+    display: block;
+    width: 48rpx;
+    height:44rpx;
+    padding:4rpx 0 0 0;
+}
+.scenicspotinfo_info .openbtn .openarrow i{
+    display: block;
+    width: 16rpx;
+    height:16rpx;
+    margin-bottom: -4rpx;
+    border-right:2rpx solid #5bcff6;
+    border-bottom:2rpx solid #5bcff6;
+    transform:rotate(45deg);
+}
+.scenicspotinfo_info .openbtn .openarrow.active{
+    height:34rpx;
+    padding:14rpx 0 0 0;
+}
+.scenicspotinfo_info .openbtn .openarrow.active i{
+    transform:rotate(225deg);
+}
+.scenicspotinfo_nearby{
+    padding:0 0 0 24rpx;
+    background-color: #ffffff;
+}
+.scenicspotinfo_nearby .til{
+    font-size: 28rpx;
+    line-height: 80rpx;
+    color:#222222;
+}
+.scenicspotinfo_nearby .til image{
+    display:inline-block;
+    width:30rpx;
+    height:30rpx;
+    margin-top:24rpx;
+    margin-right:10rpx;
+    vertical-align:top;
+}
+.scenicspotinfo_nearby .lists{
+    height:170rpx;
+    padding-left:24rpx;
+}
+.scenicspotinfo_nearby .lists image{
+    float:left;
+    display: block;
+    width: 130rpx;
+    height:130rpx;
+    margin-top: 20rpx;
+}
+.scenicspotinfo_nearby .lists .contents{
+    height: 148rpx;
+    padding-top: 20rpx;
+    margin-left: 160rpx;
+    border-bottom:2rpx solid #e8e8e8;
+}
+.scenicspotinfo_nearby .lists .contents p{
+    display: block;
+}
+.scenicspotinfo_nearby .lists .contents .til{
+    padding-right: 24rpx;
+    margin-bottom: 70rpx;
+    font-size: 32rpx;
+    line-height: 32rpx;
+}
+.scenicspotinfo_nearby .lists .contents .info{
+    padding-right: 24rpx;
+    font-size: 28rpx;
+    line-height: 28rpx;
+    color:#999;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.loading{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.loading text{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}

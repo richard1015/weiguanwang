@@ -1,0 +1,78 @@
+<!--scenicintroduce.wxml-->
+<view class="tip_list">
+    <view class="tip_list_icon">
+        <image src="../../image/icon5.png" mode="widthFix"></image>
+    </view>
+    <view class="tip_list_text">
+        <p class="titles">景区介绍</p>
+        <p class="infos">{{pageData.Introduce}}</p>
+    </view>
+</view>
+<view class="tip_list">
+    <view class="tip_list_icon">
+        <image src="../../image/icon1.png" mode="widthFix"></image>
+    </view>
+    <view class="tip_list_text">
+        <p class="titles">开放时间</p>
+        <p class="infos">{{pageData.OpenTime}}</p>
+    </view>
+</view>
+<view class="tip_list">
+    <view class="tip_list_icon">
+        <image src="../../image/icon7.png" mode="widthFix"></image>
+    </view>
+    <view class="tip_list_text">
+        <p class="titles">票价详情</p>
+        <p class="infos">{{pageData.PriceDesc}}</p>
+    </view>
+</view>
+<view class="tip_list">
+    <view class="tip_list_icon">
+        <image src="../../image/icon4.png" mode="widthFix"></image>
+    </view>
+    <view class="tip_list_text">
+        <p class="titles">景区地址</p>
+        <p class="infos">{{pageData.Address}}</p>
+    </view>
+</view>
+<view class="tip_list">
+    <view class="tip_list_icon">
+        <image src="../../image/icon2.png" mode="widthFix"></image>
+    </view>
+    <view class="tip_list_text">
+        <p class="titles">温馨提示</p>
+        <p class="infos">{{pageData.Suitable}}</p>
+    </view>
+</view>
+<view class="tip_list">
+    <view class="tip_list_icon">
+        <image src="../../image/icon1.png" mode="widthFix"></image>
+    </view>
+    <view class="tip_list_text">
+        <p class="titles">电话咨询</p>
+        <p class="infos">{{pageData.Telephone}}</p>
+    </view>
+</view>
+<!-- <view class="tip_list">
+    <view class="tip_list_icon">
+        <image src="../../image/icon6.png" mode="widthFix"></image>
+    </view>
+    <view class="tip_list_text">
+        <p class="titles">小贴士</p>
+        <p class="infos">{{pageData.Tips}}</p>
+    </view>
+</view> -->
+<!-- <view class="tip_list">
+    <view class="tip_list_icon">
+        <image src="../../image/icon3.png" mode="widthFix"></image>
+    </view>
+    <view class="tip_list_text">
+        <p class="titles">交通方式</p>
+        <p class="infos">{{pageData.Traffic}}</p>
+    </view>
+</view> -->
+
+
+
+
+

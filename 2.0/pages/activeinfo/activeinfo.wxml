@@ -1,0 +1,66 @@
+<!--activeinfo.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="active-main">
+  <view class="active-main-til">
+    <image class="active-main-ban"
+      src="{{pageData.ActivitiesImage}}" mode="widthFix"></image>
+    <view class="active-banner-shade"></view>
+    <view class="active-banner-text">{{pageData.ActivitiesName}}</view>
+  </view>
+  <view class="label">
+    <view class="num">浏览
+      <text class="">{{pageData.ReadingCount}}</text>
+    </view>
+    <view class="intro">特色:<text>{{pageData.TitleLabel}}</text></view>
+  </view>
+  <template is="wxParse" data="{{wxParseData:Content.nodes}}" />
+  <view class="infonum">
+    <text class="">{{'浏览 '+pageData.ReadingCount}}</text>
+    <text class="">{{'赞 '+pageData.Fabulous}}</text>
+  </view>
+  <view class="information">
+    <view class="title">活动信息</view>
+    <view class="main">
+      <view class="main-list"><image src="../../image/active5.png" mode="aspectFit" class="information-icon"></image>{{'报名截止时间：'+pageData.ActivitiesOverTime}}</view>
+      <view class="main-list"><image src="../../image/active1.png" mode="aspectFit" class="information-icon"></image>{{pageData.StartTime+'至'+pageData.EndTime}}</view>
+      <view class="main-list"><image src="../../image/active2.png" mode="aspectFit" class="information-icon"></image>{{pageData.PeopleNum==0?'人数无限制':'限'+pageData.PeopleNum+'人'}}</view>
+      <view class="main-list" bindtap="getPosition" style="color:#0D9BF2;">
+        <image src="../../image/active3.png" mode="aspectFit" class="information-icon"></image>{{pageData.Address}}
+      </view>
+      <view class="main-list"><image src="../../image/active4.png" mode="aspectFit" class="information-icon"></image>{{'￥'+pageData.Price+'/人'}}</view>
+      <view class="main-list" bindtap="toCallUp" data-phone="{{pageData.ActivitiesPhone}}" style="color:#0D9BF2;">
+        <image src="../../image/active6.png" mode="aspectFit" class="information-icon"></image>{{pageData.ActivitiesPhone}}
+      </view>
+      <view class="main-list">
+        <image src="../../image/active7.png" mode="aspectFit"
+          class="information-icon" style="vertical-align:middle;"></image>
+        <image
+          wx:for="{{activeImg}}"
+          wx:key="index" src="{{item}}"
+          data-itemData="{{item}}"
+          bindtap="showBigImg"
+          mode="aspectFit"
+          class="information-img"></image>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{likesOff}}" class="floor" bindtap="getLikes">
+    <view class="icon">
+      <image class="" src="../../image/zan.png" />
+    </view>
+    <text class="">支持一下</text>
+  </view>
+  <view wx:if="{{!likesOff}}" class="floor" bindtap="getLikes">
+    <view class="icon1">
+      <image class="" src="../../image/zan.png" />
+    </view>
+    <text class="">已点赞</text>
+  </view>
+</view>
+<view wx:if="{{bigImgShow}}" class="active-shade">
+  <image class="active-shade-img" src="{{bigImg}}" mode="widthFix"></image>
+  <text class="active-shade-close" bindtap="showBigImg">关闭</text>
+</view>
+<!-- <view
+  bindtap="goback"
+  class="par_goback">返回</view> -->

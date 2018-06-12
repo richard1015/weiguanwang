@@ -1,0 +1,11 @@
+<block wx:for="{{list}}" wx:key="{{item.id}}">
+    <view class="tip_list">
+        <view class="tip_list_icon">
+            <image src="{{item.image}}" mode="widthFix"></image>
+        </view>
+        <view class="tip_list_text"> 
+            <p class="titles">{{item.name}}</p>
+            <p class="infos">{{item.info}}</p>
+        </view>
+    </view>
+</block>

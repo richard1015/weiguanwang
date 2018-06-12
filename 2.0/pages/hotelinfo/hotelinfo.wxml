@@ -1,0 +1,29 @@
+<!--food.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="food-main">
+    <image class="banner" src="{{pageData.TitleImg}}"/>
+    <text class="title">{{pageData.Title}}</text>
+    <view class="info">
+        <view class="intro">{{"特色："+pageData.TitleLabel}}</view>
+    </view>
+    <template is="wxParse" data="{{wxParseData:Content.nodes}}"/>
+    <view class="infonum">
+        <text class="">{{'浏览 '+pageData.BrowseVolume}}</text>
+        <text class="">{{'赞 '+pageData.Fabulous}}</text>
+    </view>
+    <view wx:if="{{likesOff}}" class="floor" bindtap="getLikes">
+        <view class="icon">
+            <image class="" src="../../image/zan.png" />
+        </view>
+        <text class="">支持一下</text>
+    </view>
+    <view wx:if="{{!likesOff}}" class="floor" bindtap="getLikes">
+        <view class="icon1">
+            <image class="" src="../../image/zan.png" />
+        </view>
+        <text class="">已点赞</text>
+    </view>
+</view>
+<!-- <view 
+  bindtap="goback"
+  class="par_goback">返回</view> -->

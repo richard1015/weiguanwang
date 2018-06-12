@@ -1,0 +1,30 @@
+<!--mapguide.wxml-->
+<map 
+    wx:if="{{mapOk}}"
+
+    id="map" 
+    
+    longitude="{{longitude}}" 
+    latitude="{{latitude}}"    
+    scale="{{scale}}" 
+
+    bindtap="maptap"
+    
+    controls="{{controls}}" 
+    bindcontroltap="controltap"
+    
+    markers="{{markers}}"
+    bindmarkertap="markertap"
+
+    bindregionchange="regionchange" 
+    show-location
+    style="width: 100%; height:100%;">
+</map>
+<view 
+    wx:if="{{!mapOk}}"
+    class="loading">
+    <text>正在定位...</text>
+</view>
+<!-- <view 
+  bindtap="goback"
+  class="par_goback">返回</view> -->

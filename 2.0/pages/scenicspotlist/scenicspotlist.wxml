@@ -1,0 +1,53 @@
+<scroll-view
+  class="scenicspot_main"
+  scroll-y="true"
+  lower-threshold="100"
+  bindscrolltolower="lower"
+  style="height:{{scrollHeight}}px;">
+  <!-- <view class="scenicspot_goback" bindtap="toGoBack">全部景区</view> -->
+  <swiper
+    class="scenicspot_swiper"
+    indicator-dots="true"
+    autoplay="true"
+    interval="5000"
+    duration="1000"
+    circular="true" >
+    <swiper-item wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <image src="{{item.BannerImg}}" class="slide-image" mode="scaleToFill"/>
+    </swiper-item>
+  </swiper>
+  <view class="scenicspot_sort">
+    <navigator
+      class="scenicspot_sort_list"
+      url="/pages/scenicintroduce/scenicintroduce">
+      <image src="/image/tieshi.png"></image>
+      <text>景区贴士</text>
+    </navigator>
+    <navigator
+      class="scenicspot_sort_list"
+      url="/pages/comment/comment?title=景区点评">
+      <image src="/image/dianping.png"></image>
+      <text>景区点评</text>
+    </navigator>
+  </view>
+  <!-- 注意 open-type -->
+  <view class="scenicspot_view">
+    <view
+      wx:for="{{scenicList}}" wx:key="index"
+      data-pagedata="{{item}}"
+      data-index="{{index}}"
+      bindtap="goToNextPage"
+      class="scenicspot_main_list">
+      <view class="image_wrap">
+        <image src="{{item.SquarePicUrl}}"></image>
+        <view class="middle_icon">
+          <view></view>
+        </view>
+        <view class="required" wx:if="{{item.IsListen==1}}">必听</view>
+      </view>
+      <text>{{item.SName}}</text>
+    </view>
+  </view>
+  <view wx:if="{{!noData}}" class="par_updatehint">正在加载...</view>
+  <view wx:if="{{noData && scenicList.length>9}}" class="par_updatehint">没有更多数据了</view>
+</scroll-view>

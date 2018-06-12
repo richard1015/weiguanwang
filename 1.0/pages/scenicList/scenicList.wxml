@@ -1,0 +1,57 @@
+<!-- <view class="sceniclist"> -->
+<view class="sceniclist_head">
+  <view class="sceniclist_sreach">
+    <view class="position_wrap">
+      <view class="sreach_position" bindtap="choiceCity">
+        <span>{{city}}</span>
+        <view class="down_arrow"></view>
+      </view>
+    </view>
+    <view class="sreach_wrap">
+      <view class="sreach_input">
+        <text wx:if="{{!tempKeyword}}">输入景区名</text>
+        <input placeholder-class="sreach_placeholder" bindinput="bindKeyInput" value="{{tempKeyword}}" />
+        <!-- placeholder="输入景区名" -->
+      </view>
+      <view class="clearinput" catchtap="clearInput" wx:if="{{!!tempKeyword}}">
+        <icon type="clear" size="16" color="#222222" />
+      </view>
+      <view class="iconbtn" bindtap="searchList">
+        <icon type="search" size="16" color="#222222" />
+      </view>
+    </view>
+  </view>
+  <view class="sceniclist_sort">
+    <view id="{{item.id}}" class="sceniclist_sort_list {{item.state=='1' ? 'active' : ''}}" bindtap="getSort" wx:for-items="{{sortbtn}}" wx:key="{{item.id}}">
+      <span>{{item.name}}</span>
+    </view>
+  </view>
+</view>
+<scroll-view class="sceniclist_main" scroll-y="true" scroll-top="{{scrollTop}}" bindscrolltolower="scrolltolowerEvent">
+  <navigator wx:for="{{scenicListData}}" wx:key="{{index}}" class="sceniclist_main_list" hover-class="none" url="../../pages/scenicSpotList/scenicSpotList?id={{item.Id}}&name={{item.SName}}">
+    <!-- open-type="redirect" -->
+    <view class="list_banner">
+      <view class="banner_text">
+        <view class="banner_label">
+          <view class="titles">{{item.SName}}</view>
+          <view class="labels">{{item.Grade}}A | {{item.TypeName}} | {{item.Distance}}</view>
+        </view>
+        <view class="playback">
+          <image src="/image/erji.png"></image>
+          <span>{{item.ListenCount}}人听</span>
+        </view>
+      </view>
+      <image src="{{item.BigImg}}" class="banner_image"></image>
+    </view>
+    <view class="list_info">
+      {{item.Introduce}}
+    </view>
+  </navigator>
+  <view class="sceniclist_load">
+    <text wx:if="{{listLoad && loadResult}}">正在加载...</text>
+    <!-- <text wx:if="{{listLoad && !loadResult}}">———— 到底啦^_^ ————</text> -->
+    <image wx:if="{{listLoad && !loadResult}}" src="/image/daodi.png"></image>
+  </view>
+</scroll-view>
+<view class="search_none" wx:if="{{dataNothing}}">没有找到相关景区</view>
+<!-- </view> -->

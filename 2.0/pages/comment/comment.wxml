@@ -1,0 +1,34 @@
+<!--comment.wxml-->
+<scroll-view
+    class="food-set"
+    scroll-y
+    lower-threshold="100"
+    bindscrolltolower="lower"
+    style="height: {{scrollHeight}}px;">
+    <view
+        wx:for="{{commentList}}" wx:key="index"
+        class="comment_list">
+        <view class="comment_list_image">
+            <image src="{{item.HeadImg}}"></image>
+        </view>
+        <view class="comment_list_text">
+            <p class="username">{{item.NickName}}</p>
+            <view class="info_wrap">
+                <image
+                    mode="aspectFit"
+                    src="{{'/image/level' + item.Star + '.png'}}">
+                </image>
+                <span class="time">{{item.CreateTime}}</span>
+            </view>
+            <p class="infos">{{item.CommentContent}}</p>
+        </view>
+    </view>
+    <view wx:if="{{!noData}}" class="par_updatehint">正在加载...</view>
+    <view wx:if="{{noData && commentList.length>10}}" class="par_updatehint">没有更多数据了</view>
+</scroll-view>
+<view
+  wx:if="{{noingData}}"
+  class="noingdata">
+  <image src="../../image/nonedata.png" mode="widthFix"></image>
+  <text class="">暂无数据~</text>
+</view>

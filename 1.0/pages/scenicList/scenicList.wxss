@@ -1,0 +1,241 @@
+.sceniclist{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.sceniclist_head{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:10;
+    width: 100%;
+    background-color: #ffffff;
+}
+.sceniclist_sreach{
+    display: flex;
+    flex-direction:row;
+    height:56rpx;
+    padding:16rpx 25rpx;    
+    background-color: #f6f6f6;
+    border-bottom: 1rpx solid #e8e8e8;
+    justify-content:space-between;
+}
+.position_wrap{
+    position: relative;
+    width: 172rpx;
+}
+.sreach_position{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);    
+    max-width:172rpx;
+    height:56rpx;
+    padding-right:36rpx;
+    font-size:28rpx;
+    line-height:56rpx;
+    color:#16bcf8;
+    text-align:left;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+}
+.sreach_position picker{
+    display: inline-block;
+}
+.sreach_position .weui-input{
+    display: inline-block;
+}
+.sreach_position .down_arrow{
+    position: absolute;
+    right:4rpx;
+    top:14rpx;
+    /* display:inline-block;
+    vertical-align:top;
+    margin-left:10rpx;
+    margin-top:14rpx; */
+}
+.sreach_wrap{
+    position: relative;
+    width: 500rpx;
+    height:56rpx;
+    background-color: #ffffff;
+    border:1rpx solid rgba(0, 0, 0, .2);
+}
+.sreach_input{
+    position: relative;
+    display: inline-block;
+    width: 362rpx;
+    height:40rpx;
+    min-height: auto;
+    padding-left: 28rpx;
+    margin-top: 8rpx;
+    border-right:1rpx solid #e8e8e8;
+    font-size: 28rpx;
+    line-height: 40rpx;
+}
+.sreach_input text{
+    position: absolute;
+    top:0;
+    left:28rpx;
+    z-index:2;
+    color:#999999;
+}
+.sreach_input input{
+    position: absolute;
+    top:0;
+    left:28rpx;
+    z-index:3;
+    width:300rpx;
+    height:40rpx;
+    min-height:40rpx;
+    /* margin-top:-2rpx; */
+    background-color: transparent;
+}
+.clearinput{
+    position:absolute;
+    left:310rpx;
+    top:50%;
+    z-index:50;
+    transform:translateY(-50%);
+    width:100rpx;
+    height:100rpx;
+}
+.clearinput icon{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+.sreach_wrap .iconbtn{
+   position: relative;
+   display:inline-block;
+   width:100rpx;
+   height:56rpx;
+   vertical-align:top;
+}
+.sreach_wrap .iconbtn icon{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.sreach_placeholder{
+    font-size: 28rpx;
+    line-height: 40rpx;
+}
+.sceniclist_sort{
+    display: flex;
+    color:#222;
+    text-align: center;
+}
+.sceniclist_sort_list{
+    flex:1;
+    height: 88rpx;
+    border-bottom:2rpx solid #e8e8e8;
+}
+.sceniclist_sort_list.active{
+    color:#16bcf8;
+    border-bottom:2rpx solid #16bcf8;
+}
+.sceniclist_sort_list span{
+    display: inline-block;
+    width: 100%;
+    height: 38rpx;
+    margin:25rpx 0;
+    border-right:1rpx solid #e8e8e8;
+    font-size: 28rpx;
+    line-height: 38rpx;
+}
+.sceniclist_main{
+    box-sizing: border-box;
+    padding-top:200rpx;
+    height:100%;
+}
+.sceniclist_main_list{
+    margin-bottom: 30rpx;
+}
+.sceniclist_main_list .list_banner{
+    position: relative;
+    width: 700rpx;
+    margin:0 auto;   
+}
+.list_banner .banner_text{
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: 2;
+    display: block;
+    width: 700rpx;
+    height: 300rpx;
+    background-color: rgba(0,0,0,0.3);
+    border-radius:6rpx;
+    color:#ffffff;
+}
+.list_banner .banner_image{
+    position: relative;
+    display: block;
+    width: 700rpx;
+    height: 300rpx;
+    border-radius:6rpx; 
+}
+.banner_text .banner_label{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width: 100%;
+    text-align: center;
+}
+.banner_text .banner_label .titles{
+    margin-bottom: 30rpx;
+    font-size: 30rpx;
+    font-weight:600;
+}
+.banner_text .banner_label .labels{
+    font-size: 26rpx;
+}
+.banner_text .playback{
+    position:absolute;
+    right:0;
+    bottom:0;
+    min-width:180rpx;
+    height:40rpx;
+    padding:0 10rpx;
+    background-color:rgba(0,0,0,0.4);
+    border-radius:20rpx;
+    font-size:24rpx;
+    line-height:40rpx;
+    text-align:right;
+}
+.banner_text .playback image{
+    display:inline-block;
+    width:34rpx;
+    height:34rpx;
+    margin-right:10rpx;
+}
+.banner_text .playback image{
+    vertical-align:top;
+}
+.sceniclist_main_list .list_info{
+    width: 700rpx;
+    margin:10rpx auto 0;
+    font-size:30rpx;
+    line-height:40rpx;
+}
+.sceniclist_main .sceniclist_load{
+    margin:28rpx 0;
+    font-size: 24rpx;
+    line-height: 48rpx;
+    text-align: center;
+}
+.sceniclist_main .sceniclist_load image{
+    width:478rpx;
+    height:28rpx;
+}
+.search_none{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

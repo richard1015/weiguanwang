@@ -1,0 +1,27 @@
+<scroll-view scroll-y="true" bindscrolltolower="scrollLoad" style="height:100%;position:relative;">
+    <view class="comment_list" wx:for="{{list}}" wx:key="{{item.id}}">
+        <view class="comment_list_image">
+            <image src="{{item.HeadImg}}"></image>
+        </view>
+        <view class="comment_list_text"> 
+            <p class="username">{{item.NickName}}</p>
+            <view class="info_wrap">
+                <image 
+                    mode="aspectFit"
+                    src="{{'/image/level' + item.Star + '.png'}}">                    
+                </image>
+                <span class="time">{{item.CreateTime}}</span>
+            </view>
+            <p class="infos">{{item.Content}}</p>
+        </view>
+    </view>
+    <view class="comment_load">
+        <text wx:if="{{commentLoad}}">正在加载...</text>
+    </view>
+    <view 
+        class="comment_bottom {{commentNone?'active1':'active'}}"
+        wx:if="{{commentAdd}}">
+        <text>亲，没有更多评论了... </text>
+        <text>去链景旅行App上留下您的足迹吧！</text>
+    </view>
+</scroll-view>

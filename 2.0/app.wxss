@@ -1,0 +1,161 @@
+/**app.wxss**/
+@import "/wxParse/wxParse.wxss";
+page{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-family:'黑体';
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+.par_updatehint{
+    width: 100%;
+    height: 60rpx;
+    font-size: 32rpx;
+    line-height:60rpx;
+    text-align: center;
+}
+/* 列表页没有任何数据 */
+.noingdata{
+  position: absolute;
+  top:50%;
+  left:50%;
+  z-index:9;
+  transform: translate(-50%,-50%);
+  display: block;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+.noingdata image{
+  display: block;
+  width:400rpx;
+  margin:0 auto 20rpx;
+}
+
+/* 返回按钮 */
+.par_goback{
+  position: absolute;
+  top:40rpx;
+  right:0;
+  z-index: 5;
+  width: 150rpx;
+  height: 50rpx;
+  background-color: #ffffff;
+  border: 2rpx solid #dbd5d5;
+  border-right:0;
+  border-top-left-radius: 25rpx;
+  border-bottom-left-radius: 25rpx;
+  font-size:24rpx;
+  line-height: 50rpx;
+  color:#fe7c1a;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* 公用列表 */
+.food-list{
+    padding:30rpx;
+    margin-bottom: 20rpx;
+    background-color:#ffffff;
+}
+.food-list .title{
+    width: 100%;
+    height: 44rpx;
+    margin-bottom: 30rpx;
+    font-size: 40rpx;
+    line-height: 44rpx;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.food-list .main{
+    position: relative;
+    width: 690rpx;
+    height: 360rpx;
+}
+.food-list .main>image{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.food-list .info{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width: 630rpx;
+    height: 60rpx;
+    padding:0 30rpx;
+    background-color: rgba(0,0,0,0.2);
+    line-height: 60rpx;
+    color:#ffffff;
+}
+.food-list .info .left text{
+}
+.food-list .info .right{
+    float:right;
+}
+.food-list .info .right image{
+    width:40rpx;
+    height:40rpx;
+    vertical-align:top;
+    margin-top:10rpx;
+}
+.food-list .info .right text{
+    vertical-align: top;
+}
+
+/* 公共点赞 */
+.floor{
+    width: 40%;
+    margin:0 auto 60rpx;
+    text-align: center;
+}
+.floor .icon{
+    position: relative;
+    width: 100rpx;
+    height: 100rpx;
+    margin:30rpx auto 30rpx;
+    background-color: #ffc600;
+    border-radius: 50rpx;
+}
+.floor .icon1{
+    position: relative;
+    width: 100rpx;
+    height: 100rpx;
+    margin:30rpx auto 30rpx;
+    background-color: #dcdcdc;
+    border-radius: 50rpx;
+}
+.floor .icon image,
+.floor .icon1 image{
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    display:block;
+    width:60rpx;
+    height:60rpx;
+    margin:0 auto;
+}
+
+/*  */
+.infonum{
+  padding:60rpx 0 40rpx;
+  border-bottom:1px solid #d7d7d7;
+  font-size: 28rpx;
+  line-height: 32rpx;
+  color:#333333;
+}
+.infonum text{
+  margin-right:20rpx;
+}

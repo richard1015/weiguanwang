@@ -1,0 +1,54 @@
+video{
+    width: 100%;
+    margin-bottom: 20rpx;
+}
+.video-main .info{
+    padding:0 30rpx 30rpx;
+    background-color: #ffffff;
+}
+.video-main .info .title{
+    margin-bottom: 20rpx;
+    font-size: 30rpx;
+    line-height: 40rpx;
+    color: #333333;
+    font-weight: 600;
+}
+.video-main .info .num{
+    font-size: 24rpx;
+    line-height: 80rpx;
+    color:#757575;
+    text-align: right;
+}
+.video-main .info .num text{
+    margin-left:10rpx;
+}
+.video-main .info .text{
+    margin-bottom: 20rpx;
+    font-size: 24rpx;
+    line-height: 36rpx;
+    color:#666666;
+}
+.video-main .info .more{
+    float: right;
+    height: 34rpx;
+    font-size: 30rpx;
+    line-height: 32rpx;
+    color: #009cff;
+    overflow: hidden;
+}
+.content{
+    display:block;
+    margin:0;
+    padding:0;
+    font-size:28rpx;
+    line-height:40rpx;
+    max-height:120rpx;
+    overflow:hidden;
+}
+.content.active{
+    max-height:none;
+}
+.infonum{
+    width: 690rpx;
+    margin: 0 auto;
+}

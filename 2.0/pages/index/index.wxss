@@ -1,0 +1,239 @@
+/**index.wxss**/
+page{
+    background-color: #f6f6f6;
+}
+.wrap{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* 模板4 */
+.top-banner{
+    width: 750rpx;
+    height: 550rpx;
+    margin-bottom: 10rpx;
+}
+.top-banner image{
+    width: 750rpx;
+    height: 550rpx;
+}
+.tabbtn{
+    display: flex;
+    flex-direction:row;
+    margin-bottom: 10rpx;
+}
+.tab-list{
+    flex:1;
+    height: 140rpx;
+    background-color: #ffffff;
+    font-size: 24rpx;
+    color:#333333;
+    text-align: center;
+}
+.tab-list image{
+    display: block;
+    width: 45rpx;
+    height: 45rpx;
+    margin: 26rpx auto 20rpx;
+}
+.module-list{
+    overflow: hidden;
+}
+.module-list:after{
+    content: '';
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.module-one{
+    float:left;
+    width: 370rpx;
+    height: 120rpx;
+    margin-bottom:10rpx;
+}
+.module-two{
+    float:left;
+    width: 210rpx;
+    height: 300rpx;    
+}
+.module-three{
+    float:left;
+    width: 300rpx;
+    height: 300rpx;    
+}
+.module-four{
+    float:left;
+    width: 220rpx;
+    height: 144rpx;    
+}
+.module-list image{
+    width: 100%;
+    height: 100%;
+}
+/* 模板1 */
+.top-banner1{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.top-banner1 image{
+    display: block;
+    width: 100%;
+    height: 100%;   
+}
+.module1{
+    position: absolute;
+    left:0;
+    top:50%;
+    transform: translate(0,-50%);
+    z-index:6;
+    background-color: rgba(0,0,0,0.4);
+}
+.module1 navigator{
+    position: relative;
+    height: 74rpx;
+    padding-left: 64rpx;
+    padding-right: 20rpx;
+}
+.module1 navigator image{
+    position: absolute;
+    left:30rpx;
+    top:50%;
+    transform: translate(0,-50%);
+    display: block;
+    width: 34rpx;
+    height: 34rpx;
+}
+.module1 navigator text{
+    display: inline-block;
+    padding:0 40rpx;
+    font-size: 30rpx;
+    line-height: 74rpx;
+    color:#ffffff;
+}
+/* 模板2 */
+.top-banner2{
+    width: 750rpx;
+    height: 500rpx;
+    margin-bottom: 34rpx;
+}
+.top-banner2 image{
+    width: 750rpx;
+    height: 500rpx;
+}
+.main{
+    position: relative;
+    width: 750rpx;
+    overflow: hidden;
+}
+.module2{
+    width: 752rpx;
+    margin-bottom: -2rpx;
+    /* position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%); */
+}
+.module2:after{
+    content: '';
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.module2 navigator{
+    float:left;
+    width:186rpx;
+    height:186rpx;
+    border-right:2rpx solid #e8e8e8;
+    border-bottom:2rpx solid #e8e8e8;
+    background-color: #ffffff;
+    text-align: center;
+}
+.module2 navigator .list{
+    text-align: center;
+}
+.module2 navigator .icon{
+    position: relative;
+    display: block;
+    width: 70rpx;
+    height: 70rpx;
+    margin:40rpx auto 10rpx;
+    border-radius: 8rpx;
+}
+.module2 navigator .icon image{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    display: block;
+    width: 30rpx;
+    /* height: 30rpx; */
+}
+.module2 navigator text{
+    font-size: 20rpx;
+    line-height: 20rpx;
+    color: #333333;
+}
+/* 1讲解 2活动 3资讯 4评论 5地图 6视频 7美食 8住宿 9WIFI 10导览图 */
+.color1{background-color:#63c7e0;}
+.color2{background-color:#63e098;}
+.color3{background-color:#799bf4;}
+.color4{background-color:#e8567b;}
+.color5{background-color:#8f87ff;}
+.color6{background-color:#e88b4d;}
+.color7{background-color:#f26c6c;}
+.color8{background-color:#7d7adf;}
+.color9{background-color:#efce19;}
+.color10{background-color:#fc73c0;}
+.color11{background-color:#9cc3f4;}
+/* 模板3 */
+.module3{
+    background-color: #ffffff;
+    padding-left:26rpx;
+}
+.module3 .title{
+    height: 32rpx;
+    padding-left:20rpx;
+    margin: 40rpx 0 30rpx 0;
+    border-left:8rpx solid #0018ff;
+    font-size: 32rpx;
+    line-height: 32rpx;
+    color:#333333;
+    overflow: hidden;
+}
+.module3 navigator{
+    float:left;
+    position: relative;
+    width:330rpx;
+    height: 154rpx;
+    margin:0 30rpx 30rpx 0;
+}
+.module3 navigator image{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.module3 navigator .name{
+    position: absolute;
+    left:150rpx;
+    top:62rpx;
+    width: 160rpx;
+    font-size: 32rpx;
+    line-height: 36rpx;
+    color: #333333;
+    overflow: hidden;
+}
+
+.loading{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.loading text{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}

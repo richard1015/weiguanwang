@@ -1,0 +1,46 @@
+<!--videoinfo.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="video-main">
+    <video 
+        id="myVideo" 
+        src="{{pageData.VideoUrl}}" 
+        controls poster="{{pageData.VideoImg}}">
+    </video>
+    <view class="info">
+<!--         <view class="num">浏览<text class="">{{pageData.BrowseVolume}}</text></view> -->
+        <view class="title">简介：</view>  
+        <view class="content active">
+            <template wx:if="{{openbtn || !overflowText}}" is="wxParse" data="{{wxParseData:Content.nodes}}"/>   
+            <template wx:if="{{!openbtn && overflowText}}" is="wxParse" data="{{wxParseData:Content1.nodes}}"/>
+        </view>
+        <view 
+            wx:if="{{!openbtn && overflowText}}"
+            bindtap="changeContentStatus"
+            data-key="openbtn"
+            class="more">更多</view>
+        <view 
+            wx:if="{{openbtn && overflowText}}"
+            bindtap="changeContentStatus"
+            data-key="openbtn"
+            class="more">收起</view>
+    </view>
+    <view class="infonum">
+        <text class="">{{'浏览 '+pageData.BrowseVolume}}</text>
+        <text class="">{{'赞 '+pageData.Fabulous}}</text>
+    </view>
+    <view wx:if="{{likesOff}}" class="floor" bindtap="getLikes">
+        <view class="icon">
+            <image class="" src="../../image/zan.png" />
+        </view>
+        <text class="">支持一下</text>
+    </view>
+    <view wx:if="{{!likesOff}}" class="floor" bindtap="getLikes">
+        <view class="icon1">
+            <image class="" src="../../image/zan.png" />
+        </view>
+        <text class="">已点赞</text>
+    </view>
+</view>
+<!-- <view 
+  bindtap="goback"
+  class="par_goback">返回</view> -->

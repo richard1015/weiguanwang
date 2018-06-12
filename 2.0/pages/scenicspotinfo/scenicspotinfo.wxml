@@ -1,0 +1,90 @@
+<!--scenicspotinfo.wxml-->
+<view wx:if="{{isShow}}">
+    <swiper
+        class="scenicspotinfo_swiper"
+        indicator-dots="true"
+        autoplay="true"
+        interval="5000"
+        duration="1000">
+        <swiper-item wx:for="{{imgUrls}}" wx:key="{{item.index}}">
+          <image src="{{item}}" class="slide-image" mode="scaleToFill"/>
+        </swiper-item>
+    </swiper>
+    <view class="scenicspotinfo_audio">
+        <view class="copy_audio">
+            <view
+                class="copy_audio_btn"
+                bindtap="playAndPause">
+                <image src="/image/bofang.png" wx:if="{{audioOff}}"></image>
+                <image src="/image/zanting.png" wx:else></image>
+            </view>
+            <view class="copy_audio_time">{{nowTime}}</view>
+            <view class="copy_audio_progress">
+                <progress
+                    percent="{{audioLoad}}"
+                    stroke-width="0.5"
+                    activeColor="#d7d7d7"
+                    backgroundColor="#eeeeee"/>
+                <slider
+                    bindtouchstart="sliderTouchstart"
+                    bindtouchend="sliderTouchend"
+                    bindchange="sliderChange"
+                    value="{{nowTimeNum}}"
+                    min="0" max="{{maxTimeNum}}"
+                    backgroundColor="transparent"
+                    activeColor="#fd8316"/>
+                    <!-- backgroundColor="#d7d7d7 transparent" -->
+            </view>
+            <view class="copy_audio_time">{{endTime}}</view>
+        </view>
+    </view>
+    <view class="scenicspotinfo_titles">
+        {{pageData.SName}}
+    </view>
+    <view class="scenicspotinfo_info">
+        <view class="til">简介</view>
+        <view class="main {{openbtn?'active':''}}">{{pageData.Introduce}}</view>
+        <view id="openbtn" bindtap="changeContentStatus">
+            <p class="openbtn" wx:if="{{!openbtn}}">
+                <span class="btnname">展开</span>
+                <span class="openarrow"><i></i><i></i></span>
+            </p>
+            <p class="openbtn" wx:if="{{openbtn}}">
+                <span class="btnname">收起</span>
+                <span class="openarrow active"><i></i><i></i></span>
+            </p>
+        </view>
+    </view>
+    <view
+        class="scenicspotinfo_nearby"
+        wx:if="{{scenicRecommendListData && scenicRecommendListData.length > 0}}">
+        <view class="til">
+            <!-- <image src="/image/damuzhi.png"></image> -->
+            <span>附近景点</span>
+        </view>
+        <view
+            wx:for="{{scenicRecommendListData}}"
+            wx:key="index"
+            data-pagedata="{{item}}"
+            bindtap="toNewPage"
+            class="lists">
+            <image src="{{item.SquarePicUrl}}"></image>
+            <view class="contents">
+                <p class="til">
+                    <span>{{item.SName}}</span>
+                    <!-- <span style="float:right;">{{item.Distance + 'm'}}</span> -->
+                </p>
+                <p class="info">{{item.Introduce}}</p>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- <view
+  bindtap="goback"
+  class="par_goback">返回</view> -->
+<view
+    wx:if="{{!isShow}}"
+    class="loading">
+    <text class="">正在加载...{{testText}}</text>
+</view>
+

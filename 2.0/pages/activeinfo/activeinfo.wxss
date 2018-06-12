@@ -1,0 +1,108 @@
+.active-main{
+    padding:80rpx 30rpx 0;
+}
+.active-main-til{
+    position: relative;
+    width:100%;
+    height: 320rpx;
+    overflow: hidden;
+}
+.active-main-ban{
+    width:100%;
+}
+.active-banner-shade{
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+}
+.active-banner-text{
+    position: absolute;
+    left:50%;
+    top:50%;
+    z-index: 2;
+    width: 80%;
+    text-align: center;
+    color:#ffffff;
+    transform:translate(-50%,-50%);
+}
+.active-main .intro{
+    font-size: 30rpx;
+    line-height: 90rpx;
+    color:#009cff;
+    vertical-align: top;
+}
+.active-main .intro text{
+    margin:0 8rpx;
+}
+.active-main .num{
+    float:right;
+    color:#757575;
+    font-size: 24rpx;
+    line-height: 90rpx;
+    vertical-align: top;
+}
+.active-main .num text{
+    margin-left:10rpx;
+}
+.active-main .information{
+    margin-bottom:100rpx;
+}
+.active-main .information .title{
+    background-color: #ffb78f;
+    font-size: 32rpx;
+    line-height: 90rpx;
+    color:#333333;
+    text-align: center;
+}
+.active-main .information .main{
+    padding:40rpx 30rpx;
+    background-color: #ffeade;
+    font-size: 28rpx;
+    line-height: 58rpx;
+    color:#666666;
+}
+.active-main .information .main .main-list{
+    /* padding-left:44rpx; */
+}
+.active-main .information-icon{
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 20rpx;
+    margin-bottom: -4rpx;
+}
+.active-main .information-img{
+    display: inline-block;
+    max-width: 120rpx;
+    max-height: 120rpx;
+    margin-right: 20rpx;
+    vertical-align: middle;
+}
+.active-shade{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.5);
+}
+.active-shade-img{
+    position: absolute;
+    top:50%;
+    left:50%;
+    z-index: 4;
+    transform: translate(-50%,-50%);
+    max-width:80%;
+    max-height: 80%;
+}
+.active-shade-close{
+    position: absolute;
+    right:40rpx;
+    top:40rpx;
+    z-index: 5;
+    color:#ffffff;
+}

@@ -1,0 +1,24 @@
+<!--raidersinfo.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="raiders-main">
+    <view class="head">{{pageData.Title}}</view>
+    <view class="info">
+        <image src="{{pageData.HeadImg}}"/>
+        <view class="main">
+            <view class="title">{{pageData.HName}}</view>
+            <view class="time">{{pageData.OperatorTime}}</view>            
+        </view>
+    </view>
+    <view class="content">
+        <template is="wxParse" data="{{wxParseData:Content.nodes}}"/>    
+    </view>
+    <view class="lable">
+        <view 
+            wx:for="{{lables}}" wx:key="index"
+            class="list">{{item}}</view>
+    </view>
+    <view class="browse">浏览 {{pageData.ReadingCount}}</view>
+</view>
+<!-- <view 
+  bindtap="goback"
+  class="par_goback">返回</view> -->

@@ -1,0 +1,18 @@
+{
+  "pages": [
+
+    "pages/scenicList/scenicList",
+    "pages/scenicSpotList/scenicSpotList",
+    "pages/scenicSpotInfo/scenicSpotInfo",
+    "pages/comment/comment",
+    "pages/city/city",
+    "pages/tip/tip"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f6f6f6"
+  }
+}

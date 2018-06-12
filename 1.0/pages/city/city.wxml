@@ -1,0 +1,46 @@
+
+<!--pages/city/city.wxml-->
+<view class="city">
+    <view class="sreach_wrap">
+      <input 
+        class="sreach_input" 
+        placeholder-class="sreach_placeholder" 
+        placeholder="输入 国内城市/海外国家"
+        bindconfirm="bindKeyEnter"
+        bindinput="bindKeyInput" />
+      <view class="iconbtn" bindtap="searchList">
+        <icon type="search" size="16" color="#222222"/>
+      </view>
+    </view>
+<!--     <view class="city_title">
+      <view class="city_title_border">
+        <view class="city_title_border_text">
+          <input type="text" bindconfirm="bindKeyEnter" bindinput="bindKeyInput" placeholder="输入 国内城市/海外国家" />
+        </view>
+        <view class="city_title_border_search" bindtap="searchList">
+          <icon type="search" size="16" color="#222222" />
+        </view>
+      </view>
+    </view> -->
+    <view class="city_tab">
+      <view class="city_tab_lable {{item.state ? 'active' : ''}}" bindtap="choiceCountry" data-type="{{item.type}}" wx:for="{{types}}" wx:key="{{item.type}}">
+        {{item.name}}
+        <span wx:if="{{item.type == 1}}"></span> 
+      </view>
+    </view>
+    <view class="city_hot">
+      <lable class="city_list_title" wx:if="{{types[0].state}}">热门城市</lable>
+      <lable class="city_list_title" wx:else>热门国家</lable>
+      <view class="city_hot_list">
+        <span wx:for="{{hotCityList}}" bindtap="choiceCity" data-name="{{item.Name}}" wx:key="{{item.Id}}">{{item.Name}}</span> 
+      </view>
+    </view>
+    <view class="city_list" wx:for="{{cityList}}" wx:for-item="item" wx:key="{{item.Id}}">
+      <lable class="city_list_title">{{item.firstLetter}}</lable>
+      <view bindtap="choiceCity" data-name="{{itemChild.Name}}" class="city_list_info" wx:for="{{item.childs}}" wx:for-item="itemChild" wx:key="{{itemChild.Id}}">
+        <image src="{{itemChild.ImgUrl}}"></image>
+        <label>{{itemChild.Name}}</label>
+      </view>
+    </view>
+
+</view>

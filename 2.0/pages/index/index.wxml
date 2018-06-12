@@ -1,0 +1,106 @@
+<!--index.wxml-->
+<view wx:if="{{readyStatu && template == 4}}" class="wrap">
+    <swiper class="top-banner" indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular>
+        <swiper-item wx:for="{{imgUrls}}" wx:key="k">
+          <image src="{{item.BannerImg}}" class="slide-image" width="355" height="150"/>
+        </swiper-item>
+    </swiper>
+    <view class="tabbtn">
+        <navigator  class="tab-list" url="/pages/scenicspotlist/scenicspotlist">
+            <image src="../../image/1.png"></image>
+            <text>智能导游</text>    
+        </navigator >
+        <navigator  class="tab-list" url="/pages/mapguide/mapguide">
+            <image src="../../image/2.png"></image>    
+            <text>地图导览</text>    
+        </navigator >
+        <navigator  class="tab-list" url="/pages/comment/comment">
+            <image src="../../image/3.png"></image>
+            <text>游客点评</text>    
+        </navigator >
+        <navigator  class="tab-list" url="/pages/map/map">
+            <image src="../../image/4.png"></image>
+            <text>地图导航</text>    
+        </navigator >
+    </view>
+    <view class="module-list">
+        <navigator class="module-one" url="/pages/active/active" style="margin-right:10rpx;">
+            <image src="../../image/jierihuodong.png"/>
+        </navigator>
+        <navigator class="module-one" url="/pages/raiders/raiders">
+            <image src="../../image/youwangonglue.png"/>
+        </navigator>   
+        <navigator class="module-two" url="/pages/hotel/hotel" style="margin-right:10rpx;">
+            <image src="../../image/tesezhusu.png"/>
+        </navigator>
+        <navigator class="module-three" url="/pages/food/food" style="margin-right:10rpx;">
+            <image src="../../image/tesemeishu.png"/>
+        </navigator>
+        <navigator class="module-four" url="/pages/video/video" style="margin-bottom:12rpx;">
+            <image src="../../image/shipin.png"/>
+        </navigator>
+        <navigator class="module-four" url="/pages/wifi/wifi">
+            <image src="../../image/WIFI.png"/>
+        </navigator>
+    </view>
+</view>
+<view wx:if="{{readyStatu && template == 2}}" class="wrap">
+    <swiper class="top-banner2" indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular>
+        <swiper-item wx:for="{{imgUrls}}" wx:key="k">
+          <image src="{{item.BannerImg}}" class="slide-image" width="355" height="150"/>
+        </swiper-item>
+    </swiper>
+    <view class="main">
+        <view class="module2">
+            <navigator 
+                wx:for="{{nowModuleData}}" wx:key="index"
+                url="{{item.url}}">
+                <view class="icon {{'color'+(item.Id>10?11:item.Id)}}">
+                    <image mode="widthFix" src="{{item.image}}"/>
+                </view>
+                <text class="">{{item.title}}</text>               
+            </navigator>
+        </view>        
+    </view>
+</view>
+<view wx:if="{{readyStatu && template == 1}}" class="wrap">
+    <swiper class="top-banner1" indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular>
+        <swiper-item wx:for="{{imgUrls}}" wx:key="k">
+          <image src="{{item.BannerImg}}" mode="aspectFill"/>
+        </swiper-item>
+    </swiper>
+    <view class="module1">
+        <navigator 
+            wx:for="{{nowModuleData}}" wx:key="index"
+            class="list" 
+            url="{{item.url}}">
+            <image src="{{item.image}}" aspectFit/>
+            <text class="">{{item.title}}</text>
+        </navigator>
+    </view>
+</view>
+<view wx:if="{{readyStatu && template == 3}}" class="wrap">
+    <swiper class="top-banner2" indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular>
+        <swiper-item wx:for="{{imgUrls}}" wx:key="k">
+          <image src="{{item.BannerImg}}"/>
+        </swiper-item>
+    </swiper>
+    <view class="module3">
+        <view class="title">开启旅途</view>
+        <navigator 
+            wx:for="{{nowModuleData}}" wx:key="index"
+            url="{{item.url}}">
+            <image src="{{(item.image>10?11:item.image)}}" />
+            <view class="name">{{item.title}}</view>
+        </navigator>
+    </view>
+</view>
+<view 
+    wx:if="{{!readyStatu}}"
+    class="loading">
+    <text class="">正在加载...</text>
+</view>

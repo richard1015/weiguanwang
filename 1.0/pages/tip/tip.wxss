@@ -1,0 +1,31 @@
+.tip_list{
+    display: flex;
+    padding:24rpx 30rpx;
+    background-color: #ffffff;
+    border-bottom: 2rpx solid #e8e8e8;
+}
+.tip_list .tip_list_icon{
+    flex:1;
+}
+.tip_list .tip_list_icon image{
+    display: block;
+    width: 36rpx;
+    margin-top:14rpx;
+}
+
+.tip_list .tip_list_text{
+    flex:10;
+}
+.tip_list .tip_list_text .titles{
+    display:block;
+    font-size:30rpx;
+    line-height:60rpx;
+    color:#333333;
+    font-weight:600;
+}
+.tip_list .tip_list_text .infos{
+    display: block;
+    font-size:28rpx;
+    line-height: 34rpx;
+    color:#666666;
+}

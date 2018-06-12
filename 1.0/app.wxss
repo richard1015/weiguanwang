@@ -1,0 +1,21 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+page{
+  height:100%;
+  background:#f6f6f6;
+}
+.down_arrow{
+    width: 18rpx;
+    height:18rpx;
+    border-top:2rpx solid #16bcf8;
+    border-right:2rpx solid #16bcf8;
+    transform:rotate(135deg);
+}
